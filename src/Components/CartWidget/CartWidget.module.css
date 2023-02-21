@@ -1,0 +1,11 @@
+.cartWidget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.cantidadCart {
+  font-size: 10px;
+  font-weight: bold;
+}

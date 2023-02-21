@@ -1,0 +1,26 @@
+.divNavbar {
+  background: #c9c9c9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listaNavbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.menuNavbar{
+  font-weight: bold;
+  color: #F15A24;
+}
+
+.carritoNavbar {
+  margin: 10px;
+}
+
+.logoNavbar {
+  margin: 10px;
+}
