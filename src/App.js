@@ -1,11 +1,11 @@
 import Footer from "./Components/Footer/Footer";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-import Navbar from "./Components/Navbar/Navbar";
+import NavBar from "./Components/Navbar/NavBar";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <NavBar />
       <ItemListContainer greeting={"Gastón"} />
       <Footer />
     </div>

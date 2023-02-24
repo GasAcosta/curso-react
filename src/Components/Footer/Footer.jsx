@@ -1,44 +1,92 @@
-import styles from "./Footer.module.css";
+import { Button, Grid } from "@mui/material";
+import { Box } from "@mui/system";
+
 import {
   TiSocialFacebook,
   TiSocialInstagram,
   TiSocialTwitter,
 } from "react-icons/ti";
 
-const Footer = () => {
+const FooterGrid = () => {
   return (
-    <div className={styles.divFooter}>
-      <div className={styles.marcaFooter}>
-        <h3>LABURAN BANDA.</h3>
-        <p>Todo gira alrededor de tu set-up</p>
-      </div>
-      <ul className={styles.listaFooter}>
-        <a className={styles.menuFooter} href="#">
-          Sobre LB
-        </a>
-        <a className={styles.menuFooter} href="#">
-          Contacto
-        </a>
-        <a className={styles.menuFooter} href="#">
-          Como comprar
-        </a>
-        <a className={styles.menuFooter} href="#">
-          FAQ's
-        </a>
-      </ul>
-      <div className={styles.rrssFooter}>
-        <a href="#">
-          <TiSocialFacebook color="#f15a24" size={25} />
-        </a>
-        <a href="#">
-          <TiSocialInstagram color="#f15a24" size={25} />
-        </a>
-        <a href="#">
-          <TiSocialTwitter color="#f15a24" size={25} />
-        </a>
-      </div>
-    </div>
+    <Box
+      sx={{
+        background: "#c9c9c9",
+        padding: "10px",
+      }}
+    >
+      <Grid container>
+        <Grid item xs={12} sm={4}>
+          <h3>LABURAN BANDA.</h3>
+          <p>Todo gira alrededor de tu set-up</p>
+        </Grid>
+        <Grid item xs={12} sm={4} display="flex"
+          justifyContent={"flex-end"}
+          alignItems="center">
+          <ul>
+            <Button
+              variant="text"
+              sx={{
+                textTransform: "none",
+                color: "#F15A24",
+                fontWeight: "bold",
+              }}
+            >
+              Sobre LB
+            </Button>
+            <Button
+              variant="text"
+              sx={{
+                textTransform: "none",
+                color: "#F15A24",
+                fontWeight: "bold",
+              }}
+            >
+              Contacto
+            </Button>
+            <Button
+              variant="text"
+              sx={{
+                textTransform: "none",
+                color: "#F15A24",
+                fontWeight: "bold",
+              }}
+            >
+              Como comprar
+            </Button>
+            <Button
+              variant="text"
+              sx={{
+                textTransform: "none",
+                color: "#F15A24",
+                fontWeight: "bold",
+              }}
+            >
+              FAQ's
+            </Button>
+          </ul>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          sm={4}
+          display="flex"
+          justifyContent={"flex-end"}
+          alignItems="center"
+        >
+          <a href="#">
+            <TiSocialFacebook color="#f15a24" size={25} />
+          </a>
+          <a href="#">
+            <TiSocialInstagram color="#f15a24" size={25} />
+          </a>
+          <a href="#">
+            <TiSocialTwitter color="#f15a24" size={25} />
+          </a>
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
-export default Footer;
+export default FooterGrid;
