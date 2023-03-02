@@ -1,3 +1,4 @@
+import { products } from "../../ProductsMock";
 import styles from "./ItemListContainer.module.css";
 
 const ItemListContainer = ({ greeting }) => {
