@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { products } from "../../ProductsMock";
 import ItemList from "../ItemList/ItemList";
-import styles from "./ItemListContainer.module.css";
 
 const ItemListContainer = () => {
   const [item, setItem] = useState([]);
@@ -22,7 +21,7 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div className={styles.itemWelcome}>
+    <div style={{ textAlign: "center", backgroundColor: "#FABA8A", padding: "5px" }}>
       <h1>LABURAN BANDA.</h1>
       <p>Todo gira alrededor de tu set-up.</p>
       <ItemList item={item} />

@@ -6,7 +6,7 @@ const NavBarGrid = () => {
   return (
     <Box
       sx={{
-        background: "#c9c9c9",
+        backgroundColor: "#c9c9c9",
         padding: "10px",
       }}
     >

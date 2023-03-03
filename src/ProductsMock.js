@@ -106,7 +106,7 @@ export const products = [
     price: 13.99,
     stock: 5,
     description:
-      "Funko POP! Harry Potter Con Piedra Filosofal es la figura multicolor que mide 9.50 cm y que viene en una caja de exhibición de ventana. ¡Descubre y expande tu colección con las otras figuras emblemáticas de Funko!",
+      "Funko POP! Harry Potter Con Piedra Filosofal es la figura multicolor que mide 9.50 cm y que viene en una caja de exhibición de ventana.",
     category: "ocio",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677763388/curso-react/products/ocio/fee_786_587_png_zyaswg.png",
   },
@@ -116,7 +116,7 @@ export const products = [
     price: 12.99,
     stock: 5,
     description:
-      "Expande tu colección de Funko con la figura Wonder Woman (Flashpoint) de la serie DC (Wonder Woman 80th) multicolor.Fabricada en vinilo, con una altura de 9.5 centímetros y su caja original para guardarla en tu estantería a buen recaudo.",
+      "Expande tu colección de Funko con la figura Wonder Woman (Flashpoint) de la serie DC (Wonder Woman 80th) multicolor.",
     category: "ocio",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677763397/curso-react/products/ocio/fee_786_587_png_cofns3.png",
   },
@@ -126,7 +126,7 @@ export const products = [
     price: 10.99,
     stock: 5,
     description:
-      "De la serie animada The Powerpuff Girls viene una figura ideal para completar tu colección Funko POP! Fuzzy Lumpkins, The Powerpuff Girls, Cartoon Network. Vine en una caja con ventana y mide casi 9.5 cm.",
+      "De la serie animada The Powerpuff Girls viene una figura ideal para completar tu colección Funko POP! Fuzzy Lumpkins, The Powerpuff Girls, Cartoon Network.",
     category: "ocio",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677763406/curso-react/products/ocio/fee_786_587_png_g83ahp.png",
   },
@@ -136,7 +136,7 @@ export const products = [
     price: 14.99,
     stock: 5,
     description:
-      "Un nuevo personaje de película llega para que amplíes tu colección de figuras Funko Pop. ¡Doctor Strange podrá acompañarte y mejorar tu estantería! Este personaje multicolor está hecho en vinilo y tiene casi 10 cm de alto.",
+      "Un nuevo personaje de película llega para que amplíes tu colección de figuras Funko Pop. ¡Doctor Strange podrá acompañarte y mejorar tu estantería!",
     category: "ocio",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677763411/curso-react/products/ocio/fee_786_587_png_bd9ec8.png",
   },
@@ -156,7 +156,7 @@ export const products = [
     price: 19.99,
     stock: 5,
     description:
-      "Para los aficionados a los juegos que exigen un control total, la alfombrilla Legion Gaming XL de Lenovo proporciona un gran espacio para destruir y disparar a todo lo que se mantenga en tu camino hacia la victoria.",
+      "Para los aficionados a los juegos que exigen un control total, la alfombrilla Legion Gaming XL de Lenovo proporciona un gran espacio para destruir y disparar.",
     category: "gaming",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677764023/curso-react/products/gaming/fee_786_587_png_grbgfl.png",
   },
@@ -186,7 +186,7 @@ export const products = [
     price: 35.24,
     stock: 5,
     description:
-      "Disfruta de comodidad en el juego con la alfombrilla gaming SteelSeries QcK Prism Cloth XL, de color negro, con base de goma texturizada antideslizante que mantiene la alfombrilla en su sitio durante las sesiones de juego.",
+      "Disfruta de comodidad en el juego con la alfombrilla gaming SteelSeries QcK Prism Cloth XL, de color negro, con base de goma texturizada antideslizante.",
     category: "gaming",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677764045/curso-react/products/gaming/fee_786_587_png_gqim9e.png",
   },
