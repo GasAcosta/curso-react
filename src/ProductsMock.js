@@ -15,18 +15,18 @@ export const products = [
     price: 24.95,
     stock: 5,
     description:
-      "La Lámpara de Mesa de Madera y Cristal Kamulo es la decoración ideal para las paredes de su casa. Con una forma redonda y con un toque madera, es ideal para crear una atmósfera acogedora.",
+      "La Lámpara de Mesa de Madera y Cristal Kamulo es la decoración ideal para las paredes de su casa. Forma redonda y toque madera.",
     category: "oficina",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677761626/curso-react/products/oficina/lampara-de-mesa-kamulo.jpg_go5bpk.jpg",
   },
   {
     id: 3,
     title:
-      "Lámpara de Mesa Exterior LED 2.5W Portátil de Metal con Batería USB Recargable Mkono",
+      "Lámpara de Mesa Exterior LED 2.5W",
     price: 29.95,
     stock: 5,
     description:
-      "La Lámpara de Mesa Exterior LED 2.5W Portátil de Metal con Batería USB Recargable Mkono es una lámpara portátil, de poco peso y diseño estiloso. La lámpara consiste en una base de acero con un asa y un difusor en forma de esfera de polietileno que emite una luz neutra agradable.",
+      "La Lámpara de Mesa Exterior LED 2.5W Portátil de Metal con Batería USB Recargable Mkono es una lámpara portátil, de poco peso y diseño estiloso.",
     category: "oficina",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677761646/curso-react/products/oficina/lampara-de-mesa-led-portatil-mkono-25w-para-exterior-con-bateria-usb-recargable.jpg_tyzykb.jpg",
   },
@@ -36,7 +36,7 @@ export const products = [
     price: 25.95,
     stock: 5,
     description:
-      "La Lámpara de Mesa de Madera Kanuni combina un diseño único y elegante con unos acabados de máxima calidad. Este tipo de lámparas de diseño nos permiten dar ese toque nórdico que aportará personalidad a cualquier espacio convirtiéndolo en algo único.",
+      "La Lámpara de Mesa de Madera Kanuni combina un diseño único y elegante con unos acabados de máxima calidad. Con un toque nórdico que aportará personalidad.",
     category: "oficina",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677761665/curso-react/products/oficina/lampara-de-mesa-kanuni.jpg_iky4ca.jpg",
   },
@@ -46,17 +46,17 @@ export const products = [
     price: 19.95,
     stock: 5,
     description:
-      "La Lámpara de Mesa de Metal y Madera Galicy combina un diseño único y elegante con unos acabados de máxima calidad. Este tipo de lámparas de diseño nos permiten dar ese toque elegante que aportará personalidad a cualquier espacio convirtiéndolo en algo único.",
+      "La Lámpara de Mesa de Metal y Madera Galicy combina un diseño único y elegante con unos acabados de máxima calidad.",
     category: "oficina",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677761678/curso-react/products/oficina/lampara-de-mesa-galicy.jpg_vuye2k.jpg",
   },
   {
     id: 6,
-    title: "Nanoleaf Shapes Triangles Starter Kit 4PK NL47-2002TW-4PK",
+    title: "Nanoleaf Shapes Triangles Starter Kit",
     price: 89.99,
     stock: 5,
     description:
-      "Consigue las luces LED Nanoleaf Shapes Triangles Starter Kit 4PK en color blanco, los paneles de luz modulares sensibles al tacto hacen que el concepto de iluminación inteligente sea un viaje creativo del diseño.",
+      "Consigue las luces LED Nanoleaf Shapes Triangles Starter Kit 4PK en color blanco, los paneles de luz modulares hacen que el concepto sea un viaje creativo.",
     category: "gaming",
     img: "https://res.cloudinary.com/ddxobed7l/image/upload/v1677762881/curso-react/products/gaming/fee_786_587_png_iuswzv.png",
   },

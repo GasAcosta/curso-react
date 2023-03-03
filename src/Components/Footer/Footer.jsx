@@ -18,7 +18,7 @@ const FooterGrid = () => {
       <Grid container>
         <Grid item xs={12} sm={4}>
           <h3>LABURAN BANDA.</h3>
-          <p>Todo gira alrededor de tu set-up</p>
+          <p>Todo gira alrededor de tu set-up.</p>
         </Grid>
         <Grid item xs={12} sm={4} display="flex"
           justifyContent={"flex-end"}
