@@ -27,7 +27,6 @@ const ItemListContainer = () => {
     <div style={{ textAlign: "center", backgroundColor: "#FABA8A", padding: "5px" }}>
       <h1>LABURAN BANDA.</h1>
       <p>Todo gira alrededor de tu set-up.</p>
-      <h2 style={{marginTop: "70px"}}>TODOS LOS PRODUCTOS</h2>
       <ItemList item={item} />
     </div>
   );
