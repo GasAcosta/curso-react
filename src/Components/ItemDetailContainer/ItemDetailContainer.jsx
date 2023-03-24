@@ -1,15 +1,28 @@
 import { useParams } from "react-router-dom";
-import { products } from "../../ProductsMock";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import ItemCount from "../ItemCount/ItemCount";
+import { getDoc, collection, doc } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { db } from "../../firebaseConfig";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const productFound = products.find((element) => element.id === Number(id));
+  const [productFound, setProductFound] = useState({});
+
+  useEffect(() => {
+    const itemsCollection = collection(db, "products");
+    const ref = doc(itemsCollection, id);
+    getDoc(ref).then((res) => {
+      setProductFound({
+        ...res.data(),
+        id: res.id,
+      });
+    });
+  }, [id]);
 
   const Img = styled("img")({
     margin: "auto",

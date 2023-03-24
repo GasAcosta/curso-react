@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Item = ({ element }) => {
   return (
     <Card sx={{ width: 345, height: 370, margin: "30px", alignItems: "center"}}>
-      <CardMedia sx={{ height: 200 }} image={element.img} alt="image" />
+      <CardMedia sx={{ height: 200, margin: "3px" }} image={element.img} alt="image" />
       <CardContent>
         <Typography variant="h5" component="div">
           {element.title}
