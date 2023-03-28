@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
-const ItemCount = () => {
-  const [contador, setContador] = useState(1);
+const ItemCount = ({ onAdd, stock, initial = 1 }) => {
+  const [contador, setContador] = useState(initial);
 
   const sumar = () => {
-    if (contador < 5) {
+    if (contador < stock) {
       setContador(contador + 1);
     }
   };
@@ -28,7 +29,9 @@ const ItemCount = () => {
       >
         -
       </Button>
-      <span style={{ color: "#F15A24", fontWeight: "bold" }}>{contador}</span>
+      <Typography style={{ color: "#F15A24", fontWeight: "bold" }}>
+        {contador}
+      </Typography>
       <Button
         onClick={sumar}
         sx={{
@@ -40,6 +43,7 @@ const ItemCount = () => {
         +
       </Button>
       <Button
+        onClick={() => onAdd(contador)}
         sx={{
           textTransform: "none",
           color: "#F15A24",

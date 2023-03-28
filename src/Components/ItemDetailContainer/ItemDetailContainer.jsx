@@ -6,12 +6,23 @@ import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
 import ItemCount from "../ItemCount/ItemCount";
 import { getDoc, collection, doc } from "firebase/firestore";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { db } from "../../firebaseConfig";
+import { CartContext } from "../../Context/CartContext";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [productFound, setProductFound] = useState({});
+  const { agregarCarrito, getProductQuantity } = useContext(CartContext);
+  let productQuantity = getProductQuantity(id);
+
+  const onAdd = (cantidad) => {
+    let producto = {
+      ...productFound,
+      quantity: cantidad,
+    };
+    agregarCarrito(producto);
+  };
 
   useEffect(() => {
     const itemsCollection = collection(db, "products");
@@ -76,7 +87,11 @@ const ItemDetailContainer = () => {
               </Grid>
               <Grid item>
                 <Typography sx={{ cursor: "pointer" }} variant="body2">
-                  <ItemCount stock={productFound.stock} />
+                  <ItemCount
+                    stock={productFound.stock}
+                    onAdd={onAdd}
+                    initial={productQuantity}
+                  />
                 </Typography>
               </Grid>
             </Grid>
@@ -86,7 +101,7 @@ const ItemDetailContainer = () => {
                 component="div"
                 style={{ fontWeight: "bold", color: "#F15A24" }}
               >
-                <p>€{productFound.price}</p>
+                €{productFound.price}
               </Typography>
             </Grid>
           </Grid>
