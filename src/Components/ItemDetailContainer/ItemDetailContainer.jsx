@@ -78,7 +78,7 @@ const ItemDetailContainer = () => {
               sx={{ textAlign: "start" }}
             >
               <Grid item xs>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5">
                   {productFound.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -86,7 +86,7 @@ const ItemDetailContainer = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography sx={{ cursor: "pointer" }} variant="body2">
+                <Typography sx={{ cursor: "pointer" }} variant="h5">
                   <ItemCount
                     stock={productFound.stock}
                     onAdd={onAdd}

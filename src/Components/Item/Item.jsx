@@ -10,7 +10,7 @@ const Item = ({ element }) => {
     <Card sx={{ width: 345, height: 370, margin: "30px", alignItems: "center"}}>
       <CardMedia sx={{ height: 200, margin: "3px" }} image={element.img} alt="image" />
       <CardContent>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5">
           {element.title}
         </Typography>
         <Typography
@@ -22,7 +22,7 @@ const Item = ({ element }) => {
       </CardContent>
       <CardActionArea>
         <CardContent>
-          <Typography variant="body2" component="div">
+          <Typography variant="body2">
             <Link
               to={`/detalle/${element.id}`}
               style={{
