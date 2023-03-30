@@ -1,9 +1,9 @@
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
-const Form = (cart, totalPrice, setOrderId) => {
+const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -13,15 +13,20 @@ const Form = (cart, totalPrice, setOrderId) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let orderData = {
+    let order = {
       buyer: userData,
       items: cart,
-      total: totalPrice,
+      total: totalPrice(),
     };
     let orderCollection = collection(db, "orders");
-    addDoc(orderCollection, orderData)
-      .then((res) => {setOrderId(res.id)})
-      .catch((err) => console.log(err));
+    addDoc(orderCollection, order).then((res) => {
+      setOrderId(res.id);
+      clearCart();
+    });
+    cart.map((elemento) => {
+      let refDoc = doc(db, "products", elemento.id);
+      updateDoc(refDoc, { stock: elemento.stock - elemento.quantity });
+    });
   };
 
   return (
