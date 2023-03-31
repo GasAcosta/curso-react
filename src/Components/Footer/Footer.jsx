@@ -1,11 +1,11 @@
 import { Button, Grid } from "@mui/material";
 import { Box } from "@mui/system";
-
 import {
   TiSocialFacebook,
   TiSocialInstagram,
   TiSocialTwitter,
 } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const FooterGrid = ({ children }) => {
   return (
@@ -21,55 +21,57 @@ const FooterGrid = ({ children }) => {
             <h3>LABURAN BANDA.</h3>
             <p>Todo gira alrededor de tu set-up.</p>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={4}
-            display="flex"
-            justifyContent={"flex-end"}
-            alignItems="center"
-          >
-            <ul>
-              <Button
-                variant="text"
-                sx={{
+          <Grid item xs={12} sm={4}>
+            <ul
+              style={{
+                display: "flex",
+                justifyContent: "space-around",
+              }}
+            >
+              <Link
+                to="/about/sobrelb"
+                style={{
                   textTransform: "none",
                   color: "#F15A24",
                   fontWeight: "bold",
+                  textDecoration: "none",
                 }}
               >
                 Sobre LB
-              </Button>
-              <Button
-                variant="text"
-                sx={{
+              </Link>
+              <Link
+                to="/about/contacto"
+                style={{
                   textTransform: "none",
                   color: "#F15A24",
                   fontWeight: "bold",
+                  textDecoration: "none",
                 }}
               >
                 Contacto
-              </Button>
-              <Button
-                variant="text"
-                sx={{
+              </Link>
+              <Link
+                to="/about/comocomprar"
+                style={{
                   textTransform: "none",
                   color: "#F15A24",
                   fontWeight: "bold",
+                  textDecoration: "none",
                 }}
               >
                 Como comprar
-              </Button>
-              <Button
-                variant="text"
-                sx={{
+              </Link>
+              <Link
+                to="/about/faqs"
+                style={{
                   textTransform: "none",
                   color: "#F15A24",
                   fontWeight: "bold",
+                  textDecoration: "none",
                 }}
               >
                 FAQ's
-              </Button>
+              </Link>
             </ul>
           </Grid>
           <Grid

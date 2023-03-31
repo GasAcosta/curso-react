@@ -3,6 +3,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import HashLoader from "react-spinners/HashLoader";
 
 const ItemListContainer = () => {
   const { category } = useParams();
@@ -28,6 +29,14 @@ const ItemListContainer = () => {
       setItem(products);
     });
   }, [category]);
+
+  if (item.length === 0) {
+    return (
+      <div style={{ display: "flex", justifyContent: "center", backgroundColor: "#FABA8A", minHeight: "500px", alignItems: "center" }}>
+        <HashLoader color="#F15A24" size={200} />
+      </div>
+    );
+  }
 
   return (
     <div

@@ -6,6 +6,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Cart from "./Components/Cart/Cart";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./Context/CartContext";
+import SectionInProgress from "./Components/SectionInProgress/SectionInProgress";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+          <Route path="/about/:about" element={<SectionInProgress />} />
         </Routes>
       </CartContextProvider>
       <Footer />

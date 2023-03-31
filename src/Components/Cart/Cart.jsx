@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Form from "../Form/Form";
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity, totalPrice, deleteProductFromCart } =
@@ -17,22 +17,30 @@ const Cart = () => {
   const [formCheckout, setFormCheckout] = useState(false);
   const [orderId, setOrderId] = useState(null);
 
+  const clearConfirm = () => {
+    Swal.fire({
+      title: "¿Quieres vaciar el carrito?",
+      showDenyButton: true,
+      confirmButtonText: "Si.",
+      denyButtonText: `No.`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clearCart();
+        Swal.fire("¡Carrito vaciado exitosamente!", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Acción detenida.", "", "info");
+      }
+    });
+  };
+
   if (orderId) {
     return (
-      <div>
-        <h2>Gracias por su compra</h2>
-        <h4>El ID de su compra es: {orderId}</h4>
-        <Link
-          to="/"
-          sx={{
-            textTransform: "none",
-            color: "#F15A24",
-            fontWeight: "bold",
-          }}
-        >
-          Seguir comprando
-        </Link>
-      </div>
+        Swal.fire({
+          icon: `success`,
+          title: `¡Gracias por su compra!`,
+          text: `El código de seguimiento de su compra es: ${orderId}`,
+          confirmButtonText: `<a href="/">Seguir comprando</a>`,
+        })
     );
   }
 
@@ -103,7 +111,7 @@ const Cart = () => {
               <h1>Precio final: €{totalPrice()}</h1>
               <h5>Cantidad total: {total}</h5>
               <Button
-                onClick={clearCart}
+                onClick={clearConfirm}
                 startIcon={<DeleteIcon />}
                 sx={{
                   textTransform: "none",
@@ -137,7 +145,14 @@ const Cart = () => {
     );
   } else {
     return (
-      <div style={{alignItems: "center", backgroundColor: "#FABA8A", textAlign: "center", padding: "8px"}}>
+      <div
+        style={{
+          alignItems: "center",
+          backgroundColor: "#FABA8A",
+          textAlign: "center",
+          padding: "8px",
+        }}
+      >
         <img
           src="https://res.cloudinary.com/ddxobed7l/image/upload/v1680200941/undraw_empty_cart_co35_n08ovg.svg"
           alt="empty-cart"

@@ -2,6 +2,7 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
+import { Button } from "@mui/material";
 
 const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
   const [userData, setUserData] = useState({
@@ -31,7 +32,16 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          textAlign: "center",
+          padding: "30px",
+          backgroundColor: "#FABA8A",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
         <TextField
           sx={{ margin: "8px" }}
           id="standard-basic"
@@ -66,8 +76,10 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
             setUserData({ ...userData, payment: e.target.value })
           }
         />
-        <button
-          style={{
+        <Button
+          variant="text"
+          sx={{
+            padding: "8px",
             textTransform: "none",
             color: "#F15A24",
             fontWeight: "bold",
@@ -76,18 +88,28 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
           type="submit"
         >
           Comprar
-        </button>
+        </Button>
       </form>
-      <button
+      <div
         style={{
-          textTransform: "none",
-          color: "#F15A24",
-          fontWeight: "bold",
-          textDecoration: "none",
+          padding: "8px",
+          textAlign: "center",
+          backgroundColor: "#FABA8A",
         }}
       >
-        Volver al carrito
-      </button>
+        <Button
+          variant="text"
+          sx={{
+            padding: "8px",
+            textTransform: "none",
+            color: "#F15A24",
+            fontWeight: "bold",
+            textDecoration: "none",
+          }}
+        >
+          Volver al carrito
+        </Button>
+      </div>
     </div>
   );
 };
