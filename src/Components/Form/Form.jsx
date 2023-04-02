@@ -90,7 +90,7 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
           Comprar
         </Button>
       </form>
-      <div
+      {/* <div
         style={{
           padding: "8px",
           textAlign: "center",
@@ -109,7 +109,7 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
         >
           Volver al carrito
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };
