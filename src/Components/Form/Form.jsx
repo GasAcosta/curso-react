@@ -27,6 +27,7 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
     cart.map((elemento) => {
       let refDoc = doc(db, "products", elemento.id);
       updateDoc(refDoc, { stock: elemento.stock - elemento.quantity });
+      return elemento
     });
   };
 

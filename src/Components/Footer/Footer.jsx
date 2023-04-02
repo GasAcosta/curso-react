@@ -82,13 +82,13 @@ const FooterGrid = ({ children }) => {
             justifyContent={"flex-end"}
             alignItems="center"
           >
-            <a href="#">
+            <a href="/">
               <TiSocialFacebook color="#f15a24" size={25} />
             </a>
-            <a href="#">
+            <a href="/">
               <TiSocialInstagram color="#f15a24" size={25} />
             </a>
-            <a href="#">
+            <a href="/ ">
               <TiSocialTwitter color="#f15a24" size={25} />
             </a>
           </Grid>
