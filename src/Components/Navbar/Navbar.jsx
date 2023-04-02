@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
-const NavBarGrid = ({ children }) => {
+const NavBar = ({ children }) => {
   return (
     <div>
       <Box
@@ -77,9 +77,10 @@ const NavBarGrid = ({ children }) => {
             item
             xs={12}
             sm={4}
-            display="flex"
-            justifyContent={"flex-end"}
-            alignItems="center"
+            sx={{
+              display: "flex",
+              justifyContent: "flex-end",
+            }}
           >
             <CartWidget />
           </Grid>
@@ -90,4 +91,4 @@ const NavBarGrid = ({ children }) => {
   );
 };
 
-export default NavBarGrid;
+export default NavBar;
