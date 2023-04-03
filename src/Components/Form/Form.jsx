@@ -41,6 +41,8 @@ const Form = ({ cart, totalPrice, setOrderId, clearCart }) => {
           backgroundColor: "#FABA8A",
           display: "flex",
           justifyContent: "space-around",
+          minHeight: "100vh",
+          alignItems: "center"
         }}
       >
         <TextField

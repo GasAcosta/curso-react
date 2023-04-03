@@ -55,6 +55,7 @@ const Cart = () => {
               backgroundColor: "#FABA8A",
               display: "flex",
               justifyContent: "space-around",
+              minHeight: "100vh"
             }}
           >
             <div>
