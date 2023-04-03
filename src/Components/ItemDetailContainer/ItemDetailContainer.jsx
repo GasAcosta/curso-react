@@ -3,7 +3,7 @@ import { getDoc, collection, doc } from "firebase/firestore";
 import { useState, useEffect, useContext } from "react";
 import { db } from "../../firebaseConfig";
 import { CartContext } from "../../Context/CartContext";
-import ItemDetail from "../../ItemDetail/ItemDetail";
+import ItemDetail from "../ItemDetail/ItemDetail";
 import { styled } from "@mui/material/styles";
 
 const ItemDetailContainer = () => {
